@@ -27,6 +27,12 @@
           </li>
 
         </ng-container>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/errors'  tabindex="-1" aria-disabled="true" routerLinkActive='active'>Errors</a>
+        </li>
+
+
         </ul>
 
         <div class="dropdown" *ngIf="(currentUser$ | async) as user" dropdown> 
