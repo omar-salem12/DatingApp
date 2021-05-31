@@ -11,8 +11,8 @@ import { MembersService } from 'src/app/_services/members.service';
 })
 export class MemberDetailComponent implements OnInit {
  member : Member;
- 
 
+  
 
 
   constructor(private memberService: MembersService, private route: ActivatedRoute) { }
@@ -20,34 +20,25 @@ export class MemberDetailComponent implements OnInit {
   ngOnInit(): void {
    
     this.loadMember();
-
     
-    
+   
 
    
+    
   }
 
-  getImages(): NgxGalleryImage[] {
-    const imageUrls = [];
-    for(const photo of this.member.photos)
-    {
+ 
 
-      imageUrls.push({
-        samll: photo?.url,
-        medium: photo?.url,
-        big: photo?.url
-      })
 
-      return imageUrls;
-    }
-  }
+ 
 
 
   loadMember() {
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
         this.member = member;
-
+        
        
     })
-  }
+  
  }
+}
