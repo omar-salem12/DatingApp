@@ -13,9 +13,6 @@
           <ng-container *ngIf="currentUser$ | async" >  
 
 
-         
-             
-
           <li class="nav-item ">
             <a class="nav-link " routerLink='/members' routerLinkActive='active'>Matches <span class="sr-only">(current)</span></a>
           </li>
@@ -36,7 +33,9 @@
         </ul>
 
         <div class="dropdown" *ngIf="(currentUser$ | async) as user" dropdown> 
-          <a class="dropdown-toggle text-light" dropdownToggle> Welcome {{user.username| titlecase}}</a>
+
+          <img src="{{user.photoUrl}}" alt="{{user.username}}">
+          <a class="dropdown-toggle text-light ml-2" dropdownToggle> Welcome {{user.username| titlecase}}</a>
           <div class="dropdown-menu mt-3" *dropdownMenu>
                    <a routerLink= "/member/edit" class="dropdown-item">Edit Profile</a>
                    <div class="dropdown-divider">

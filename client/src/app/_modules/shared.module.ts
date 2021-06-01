@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
+import { FileUploadModule } from 'ng2-file-upload';
+
 
 
 
@@ -18,9 +21,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
       
       positionClass: 'toast-bottom-right',
     }),
-    TabsModule.forRoot(),
- 
-
+     TabsModule.forRoot(),
+     FileUploadModule
+    
+  
    
   ],
   
@@ -28,10 +32,8 @@ exports: [
   BsDropdownModule,
  ToastrModule,
  TabsModule,
-  
+FileUploadModule
 
-
- 
 
 ]
   
