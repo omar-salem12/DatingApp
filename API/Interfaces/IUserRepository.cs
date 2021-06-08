@@ -12,9 +12,10 @@ namespace API.Interfaces
 
          Task<bool> SaveAllAsync();
          
-
+         
           Task<AppUser> GetUserByUsernameAsync(string username);
-
+        
+          Task<AppUser> GetUserByIdAsync(int id);
          Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
 
          Task<MemberDto> GetMemberAsync(string username);
