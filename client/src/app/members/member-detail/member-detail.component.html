@@ -9,7 +9,7 @@
 
                 <div>
                     <strong>Location:</strong>
-                    <p>{{member.city}}, {{member.country}}</p>
+                    <p>{{member.city}}, {{member.country }}</p>
                 </div>
                 <div>
                     <strong>Age:</strong>
@@ -18,13 +18,13 @@
 
                 <div>
                     <strong>Last Active:</strong>
-                    <p>{{member.lastActive}}</p>
+                    <p>{{member.lastActive | timeago}}</p>
                 </div>    
              
 
                 <div>
                     <strong>Meember since:</strong>
-                    <p>{{member.created}}</p>
+                    <p>{{member.created | date  }}</p>
                 </div>
              </div>
 
@@ -42,7 +42,7 @@
         <tabset class="member-tabset">
             <tab heading="About {{member.knownAs}}" id="tab1" >
                 <h4>Description</h4>
-                <p>{{member.introduction}}</p>
+                <p>{{member.introduction | uppercase}}</p>
                 <h4>Looking for</h4>
                 <p>{{member.lookingFor}}</p>
             </tab>

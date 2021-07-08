@@ -1,4 +1,3 @@
-using System;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -49,20 +48,16 @@ namespace API.Controllers
                    var thingToReturn = thing.ToString();
                    return  thingToReturn; 
 
-          
-           
-           
-           
-
         }
 
 
         
-        [HttpGet("Bad-request")]
+        [HttpGet("bad-request")]
         public ActionResult<string> GetBadRequest()
         {
-            return BadRequest("This was not a good request");
+            return BadRequest();
         }
+        
 }
 
 }
